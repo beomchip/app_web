@@ -1,0 +1,22 @@
+body{
+	background-color: #e2deff;
+}
+
+h2{
+	color: rgb(116, 133, 145);
+	text-align: right;
+	font-family: Verdana;
+}
+
+p{
+	color: rgb(149, 177, 199);
+	text-align: right;
+	font-family: Verdana;
+	font-size: 30px;
+}
+
+footer{
+	color: rgb(116, 133, 145);
+	text-align: right;
+	font-family: Verdana;
+}
