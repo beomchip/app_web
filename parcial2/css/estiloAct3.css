@@ -1,0 +1,42 @@
+body{
+	 background-image: url("../lilac.gif"); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+}
+
+header{
+    background-image: url("../headerchococat.jpg");
+	background-position: center;
+	height: 200px;
+	width: 100%;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-family: Verdana;
+	font-size: 20px;
+}
+
+h1{
+    	color: rgb(250, 77, 77);
+	font-family: Verdana;
+}
+
+h2{
+	color: rgb(114, 134, 176);
+	font-family: Verdana;
+
+}
+
+p{
+	color: rgb(114, 134, 176);
+	font-family: Verdana;
+}
+
+footer{
+    background-color: rgb(204, 217, 255);
+	color: rgb(116, 133, 145);
+	text-align: center;
+	font-family: Verdana;
+    font-size: 12px;
+}
