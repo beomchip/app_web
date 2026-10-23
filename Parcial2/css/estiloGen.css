@@ -1,14 +1,14 @@
 body{
 	font-family: "Cantarell", sans-serif;
-            font-weight: 400;
-            font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 
-            background-image: url("../asset/lilac.gif"); 
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            margin: 0;
+    background-image: url("../asset/lilac.gif"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
 
 }
 
