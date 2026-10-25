@@ -1,0 +1,29 @@
+body{
+    font-family: "Cantarell", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: #e2deff;
+}
+
+h1{
+	color: rgb(116, 133, 145);
+	text-align: center;
+	font-family: "Cantarell", sans-serif;
+}
+
+h2{
+	color: rgb(116, 133, 145);
+	text-align: center;
+	font-family: "Cantarell", sans-serif;
+}
+
+p{
+	color: rgb(98, 123, 141);
+	font-family: "Cantarell", sans-serif;
+}
+
+footer{
+	color: rgb(116, 133, 145);
+	font-family: "Cantarell", sans-serif;
+}

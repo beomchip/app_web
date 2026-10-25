@@ -1,23 +1,35 @@
+body{
+    font-family: "Cantarell", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: #e2deff;
+}
+
 h1{
     color: rgb(240, 151, 151);
 }
 
 h2{
-    color: rgb(181, 181, 233);
+    color: rgb(114, 114, 175);
 }
 
 p{
-    color: rgb(165, 165, 226);
+    color: rgb(101, 101, 141);
 }
 
 header{
-    color: black;
+    color: rgb(126, 143, 240);
     font-size: 20px;
-    text-align: center;
-    background-image: url(../images/FondoPkm.jpeg);
-    height: 200px;
-    background-repeat: no-repeat;
+    background-image: url(../asset/ppulbatuhead.jpe);
+    height: 250px;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer{
@@ -25,5 +37,5 @@ footer{
     text-align: center;
     background-color: #9390b4;
     color: black;
-    height: 80px;
+    height: 15px;
 }

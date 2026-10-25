@@ -1,15 +1,9 @@
 body{
-	font-family: "Cantarell", sans-serif;
+    font-family: "Cantarell", sans-serif;
     font-weight: 400;
     font-style: normal;
 
-    background-image: url("../asset/lilac.gif"); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-
+    background-color: #e2deff;
 }
 
 h2{
@@ -24,7 +18,7 @@ p{
 }
 
 footer{
-	color: rgb(116, 133, 145);
+	color: rgb(115, 147, 170);
 	font-family: Verdana;
 }
 
