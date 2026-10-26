@@ -1,0 +1,71 @@
+
+.bamgeut-box {
+    position: fixed;
+    top: 30%;
+    right: 0;
+    left: auto;
+    width: 150px;
+    height: auto;
+    z-index: 9999;
+    
+    transform: translateY(-50%) translateX(115%) rotate(-90deg);
+    animation: derecha 6s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.bamgeut-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes derecha {
+    0% {
+        /* Escondido a la derecha y rotado 90 grados */
+        transform: translateY(-50%) translateX(115%) rotate(-90deg);
+    }
+    10%, 20% {
+        /* Asomado recostado */
+        transform: translateY(-50%) translateX(25%) rotate(-90deg);
+    }
+    40%, 100% {
+        /* Se vuelve a guardar recostado */
+        transform: translateY(-50%) translateX(115%) rotate(-90deg);
+    }
+}
+
+.dagonyang-box {
+    position: fixed;
+    top: 70%;
+    left: 0;                    /* Pegado al lado izquierdo */
+    right: auto;
+    width: 150px;    /* Mismo tamaño que Bamgeut */
+    height: auto;
+    z-index: 9999;
+    
+    transform: translateY(-50%) translateX(-115%) rotate(90deg);
+    animation: izquierda 6s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.dagonyang-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Animación para que entre desde la izquierda */
+@keyframes izquierda {
+    0% {
+        /* Totalmente escondido a la izquierda y rotado acostado */
+        transform: translateY(-50%) translateX(-100%) rotate(90deg);
+    }
+    20%, 70% {
+        /* Se asoma solo hasta los bracitos (ajusta el -40% o -30% si quieres que salga más/menos) */
+        transform: translateY(-50%) translateX(-20%) rotate(90deg);
+    }
+    90%, 100% {
+        /* Se vuelve a guardar hacia la izquierda */
+        transform: translateY(-50%) translateX(-100%) rotate(90deg);
+    }
+}
