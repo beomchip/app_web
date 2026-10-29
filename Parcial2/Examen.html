@@ -4,9 +4,37 @@
     <meta charset="UTF-8">  
     <title>Tabla Préstamos</title>
     <style>
+        body{
+            font-family: "Cantarell", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+            background-color: #e2deff;
+        }
+
+        h2{
+            color: rgb(116, 133, 145);
+            text-align: center;
+            font-family: Verdana;
+        }
+
+        .filas2{
+            background-color: rgb(180, 182, 201);
+        }
+
+        p{
+            color: rgb(149, 177, 199);
+            font-family: Verdana;
+        }
+
+        footer{
+            color: rgb(115, 147, 170);
+            font-family: Verdana;
+        }
         .tabla {
             border: 1px solid rgb(46, 46, 78);           
             margin: 0 auto; 
+            background-color: rgb(191, 209, 223);
         }
         th, td {
             border: 1px solid black;            
@@ -26,41 +54,51 @@
             text-align: center;
         }
         .contenedor {
-            height: 100vh;
             text-align: center;
         }
-         img {
-            width: 100px;
-            
+
+        tr:nth-child(even){
+            background-color: #f0f1f2;
+        }
+
+        .barrita {
+            opacity: 0.6; 
+            transition: opacity 0.5s ease;
+        }
+
+        .barrita:hover {
+            opacity: 1; 
         }
     </style>
 </head>
 <body>
+    <h2>Tabla de Préstamos de Libros</h2>
+
     <div class = "contenedor">
         <button id = "btnConsultar" onclick = "genTabla()">Consultar Préstamos</button>
         <div id="tabla_dinamica">
             <table class="tabla">
-                <tr>
+                <tr class = "filas1">
                     <td>Cien años de soledad</td>
                     <td></td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr class = "filas2">
                     <td>El Principito</td>
                     <td></td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr class = "filas1">
                     <td>Don Quijote</td>
                     <td></td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr class = "filas2">
                     <td>Harry Potter</td>
                     <td></td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr class = "filas1">
                     <td>La Odisea</td>
                     <td></td>
                     <td></td>
@@ -70,37 +108,35 @@
     </div>
         <script>
             function genTabla(){
+                let titulos = ["Cien años de soledad", "El Principito", "Don Quijote", "Harry Potter", "La Odisea"]
                 let total = [0, 0, 0, 0, 0];
                 let prestados = [0, 0, 0, 0, 0];
                 let porcentajes = [0, 0, 0, 0, 0];
                 let i = 0, j = 0, num = 0, cont = 0;
                 for(i = 0; i < 5; i++){
-                    total[i] = Math.floor(Math.random()*51);
-                    prestados[i] = Math.floor(Math.random()*total[i]);
-                    porcentajes[i] = (prestados[i] * 100)/total[i];
+                    total[i] = Math.floor(Math.random() * 50) + 1;
+                    prestados[i] = Math.floor(Math.random() * (total[i] + 1));
+                    porcentajes[i] = Math.floor((prestados[i] * 100) / total[i]);
                 }
 
                 let html_txt = "<table class = 'tabla'>";
                 for(j = 0; j < 5; j++){
                     html_txt += "<tr>";
-                        for(j = 0; j < 3; j++){
-                            html_txt += "<td>";
-                            html_txt += "</td>";
-                            html_txt += "<td>";
-                            html_txt += "<img class = 'barrita' src = 'img/Barrita.png'>";
-                            html_txt += "</td>";
-                            html_txt += "<td>";
-                            html_txt += ""+ porcentajes + "%";
-                            html_txt += "</td>";
-                        }
+                    html_txt += "<td>" + titulos[j] + "</td>";
+                    html_txt += "<td style='text-align: left;'>";
+                    html_txt += "<img class = 'barrita' src='img/Barrita.png' style='width: " + porcentajes[j] + "%; height: 15px;'>";
+                    html_txt += "</td>";
+                    html_txt += "<td>";
+                    html_txt += porcentajes[j] + "%";
+                    html_txt += "</td>";
                     html_txt += "</tr>";
                 }
                 html_txt += "</table>";
                 document.getElementById("tabla_dinamica").innerHTML = html_txt;
-                //perdón :c
             }
         </script>
     <footer style = "text-align: center;">
+    </br>
         Sofía de Jesús Muñoz Morales - 188168
     </footer>
 </body>
