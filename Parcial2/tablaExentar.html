@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Tabla Aleatoria</title>
+    <link rel="stylesheet" type="text/css" href="css/estiloGen.css" media="screen" />
+    <style>
+        table {
+            border: 3px solid rgb(110, 97, 133);
+            margin: 20px auto;
+        }
+        th {           
+            text-align: center;
+            background-color: #3c2d40;
+            color: white;
+            width: 100;
+
+        }
+
+        tr{
+            background-color: rgb(213, 198, 248);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(186, 185, 229);
+        }
+
+        td {
+            text-align: center;
+            
+        }
+
+        
+        .filaClaro {
+            background-color: #f2f2f2;
+        }
+
+        .filaOscuro {
+            background-color: #f2f2f2;
+        }
+
+         #btnAlerta {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        </style>
+        </head>
+
+<body>
+    <h2>Ejercicio para Exentar</h2>
+    <div class="contenedor">
+        <button id="btnAlerta" onclick=" generarTablas()">Crear Tablas</button>
+        <div id="tabla_dinamica">
+            <table class="tabla_1">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Calificación1</th>
+                    <th>Calificación2</th>
+                    <th>Calificación3</th>
+                </tr>
+                <tr>
+                    <td>alumno 1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>alumno 2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>alumno 3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>alumno 4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>alumno 5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="tabla_dinamica2">
+            <table class="tabla_2">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Calificación1</th>
+                    <th>Calificación2</th>
+                    <th>Calificación3</th>
+                    <th>Promedio</th>
+                </tr>
+                <tr>
+                    <td>alumno 1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>alumno 2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>alumno 3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>alumno 4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>alumno 5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </table>
+            </div>
+        <footer style="text-align:center;">
+            </br>
+            Sofía de Jesús Muñoz Morales - 188168
+            </br>
+            Renata Rodríguez Martínez - 189363
+        </footer>
+
+        <script>
+        function generarTablas() {
+            let i = 0, j = 0;
+            let calificacion = 0;
+            let claseFila = "";
+
+            let html1 = "<table>";
+            html1 += "<tr><th>Nombre</th><th>Calificacion1</th><th>Calificacion2</th><th>Calificacion3</th></tr>";
+
+            for (i = 1; i <= 5; i++) {
+                if (i % 2 == 0) {
+                    claseFila = "filaClara";
+                } else {
+                    claseFila = "filaOscura";
+                }
+
+                html1 += "<tr class='" + claseFila + "'>";
+                html1 += "<td>alumno " + i + "</td>";
+
+                for (j = 0; j < 3; j++) {
+                    calificacion = (Math.random() * 10).toFixed(1);
+                    html1 += "<td>" + calificacion + "</td>";
+                }
+
+                html1 += "</tr>";
+            }
+            html1 += "</table>";
+            document.getElementById("tabla_dinamica").innerHTML = html1;
+
+            let html2 = "<table>";
+            html2 += "<tr><th>Nombre</th><th>Calificacion1</th><th>Calificacion2</th><th>Calificacion3</th><th>Promedio</th></tr>";
+
+            for (i = 1; i <= 5; i++) {
+                if (i % 2 == 0) {
+                    claseFila = "filaClara";
+                } else {
+                    claseFila = "filaOscura";
+                }
+
+                html2 += "<tr class='" + claseFila + "'>";
+                html2 += "<td>alumno " + i + "</td>";
+
+                let suma = 0;
+                for (j = 0; j < 3; j++) {
+                    calificacion = Math.floor(Math.random() * 11);
+                    suma += calificacion;
+                    html2 += "<td>" + calificacion + "</td>";
+                }
+
+                let promedio = (suma / 3);
+                html2 += "<td>" + promedio + "</td>";
+                html2 += "</tr>";
+            }
+            html2 += "</table>";
+            document.getElementById("tabla_dinamica2").innerHTML = html2;
+        }
+    </script>
+</body>
+</html>
