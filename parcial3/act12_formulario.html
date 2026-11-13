@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/estiloTd.css">
+  <link rel="icon" type="image/x-icon" href="asset/bamgeuticonjej.png">
+  <script>
+    function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    var text = "";
+    if (x == "") {
+    alert("Ingrese nombre");
+    }
+    else text += "Nombre OK<br>";
+    var y = document.getElementById("num").value;
+    if (isNaN(y) || y < 1) {
+    alert("Ingrese edad");
+    } else {
+    text += "Edad OK<br>";
+    }
+    var z = document.forms["myForm"]["RFC"].value;
+    if (z == "") {
+    alert("Ingrese RFC");
+    }
+    else text += "RFC OK<br>";
+    document.getElementById("demo").innerHTML = text;
+    }
+    </script>
+</head>
+<body>
+    <br>
+    <form name="myForm" action="#"
+        onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <br>
+        Edad: <input id="num">
+        <br>
+        <p id="demo"></p>
+        <br>
+        RFC: <input type="text" name="RFC" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+<footer>
+    </br>
+    Sofía de Jesús Muñoz Morales - 188168
+</footer>
+</body>
+</html>

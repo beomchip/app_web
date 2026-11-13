@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de getElementsByTagName</title>
+    <link rel="stylesheet" href="css/estiloTd.css">
+    <link rel="icon" type="image/x-icon" href="asset/bamgeuticonjej.png">
+</head>
+<body>
+    <h2>Ejemplo ByTagName</h2>
+    <p>Este es el primer parrafo.</p>
+    <p>Este es el segundo parrafo.</p>
+    <p>Este es el tercer parrafo.</p>
+
+    <button onclick="resaltarParrafos()">Resaltar Parrafos</button>
+    <script>
+        function resaltarParrafos() {
+            const parrafos = document.getElementsByTagName("p"); 
+            let colores = ["#909bd1", "#a799c7", "#99bdde"];           
+            for (let i = 0; i < parrafos.length; i++) {
+                parrafos[i].style.backgroundColor = colores[i];
+                parrafos[i].style.padding = "5px";
+            }
+        }
+    </script>
+<footer>
+    </br>
+    Sofía de Jesús Muñoz Morales - 188168
+</footer>
+</body>
+</html>

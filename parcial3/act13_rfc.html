@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CALCULAR RFC</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="par 32.css" media="all">
+	<link rel="stylesheet" href="css/estiloTd.css">
+  	<link rel="icon" type="image/x-icon" href="asset/bamgeuticonjej.png">
+	
+	<script type="text/javascript">
+	function RFC()
+	{
+        var nombre = document.getElementById("nombre").value.toUpperCase();
+		var apPaterno = document.getElementById("apPaterno").value.toUpperCase();
+		var apMaterno = document.getElementById("apMaterno").value.toUpperCase();
+		var anio = document.getElementById("anio").value.toUpperCase();
+		var mes = document.getElementById("mes").value.toUpperCase();
+		var dia = document.getElementById("dia").value.toUpperCase();
+
+		if (mes.length === 1) mes = "0" + mes;
+        if (dia.length === 1) dia = "0" + dia;
+
+		var letras = ["A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0"];
+		homoclave += letras[Math.floor(Math.random) * letras.length];
+		homoclave += letras[Math.floor(Math.random) * letras.length];
+		homoclave += letras[Math.floor(Math.random) * letras.length];
+
+		var rfc = apPaterno.substring(0, 2) + apMaterno.substring(0, 1) + nombre.substring(0, 1) + anio.substring(2, 4) + mes + dia + homoclave;
+		
+		document.getElementById("rfc").value = rfc;
+	}
+	</script>
+	<style>
+		div.panel{
+			position: relative;
+			width: 100%;
+			min-height: 100vh;
+			overflow: hidden;
+		}
+
+		div.bg-image{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url(asset/lilac.gif);
+			z-index: 1;
+			background-size: cover;
+			background-position: center;
+			transform: scale(1.1);
+		}
+
+		form{
+			border-radius: 5px; 
+  			padding: 50px;
+		}
+
+		div.front{
+			position: relative;
+			width: 100%;
+			padding: 20px;
+			z-index: 2;
+			box-sizing: border-box;
+		}
+
+		input[type=text], input[type=tel], select {
+			width: 100%;
+			padding: 12px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		input[type=text]:focus, input[type=tel]:focus {
+			background-color: rgb(231, 206, 214);
+		}
+
+		input[type=button], input[type=submit] {
+			width: 100%;
+			background-color: rgb(231, 183, 195);
+			color: white;
+			padding: 14px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+  			background-color: rgb(221, 198, 206);
+		}
+	</style>
+</head>
+<body>
+	<div class="panel">
+		<div class="bg-image"></div>
+			<div class="front">
+			<div align="center" id="contenido">
+				<form> <label><h1>DATOS RFC</h1></label>
+				</br></br>
+				<label>Ingrese su nombre</label>
+				<input type="text" name="" id="nombre" placeholder="Ingrese solo su nombre" required></br>
+				<label>
+					Ingrese su apellido paterno
+				</label>
+				<input type="text" name="" id="apPaterno" placeholder="Ingrese solo su apellido paterno" required></br>
+				<label>
+					Ingrese su apellido materno
+				</label>
+				<input type="text" name="" id="apMaterno" placeholder="Ingrese solo su apellido materno" required></br>
+				<h4>FECHA DE NACIMIENTO</h4>
+				<label>
+					Ingrese su año de nacimiento
+				</label>
+				<input type="text" name="" id="anio" placeholder="Ingrese solo su año de nacimiento" required></br>
+				<label>
+					Ingrese su mes de nacimiento
+				</label>
+				<input type="text" name="" id="mes" placeholder="Ingrese solo su mes de nacimiento" required></br>
+				<label>
+					Ingrese su dia de nacimiento
+				</label>
+				<input type="text" name="" id="dia" placeholder="Ingrese solo su dia de nacimiento" required></br>
+				<h4>
+					GÉNERO
+				</h4>
+				<input type="radio" id="fem" name="gender" value="fem" required>
+				<label for="fem">Femenino</label><br>
+				<input type="radio" id="masc" name="gender" value="masc" required>
+				<label for="masc">Masculino</label><br>
+				</br>
+				<input type="button" name="calcular" id="calcular" value="ENVIAR DATOS PARA OBTENER RFC" onclick="RFC()" required></br>
+				</br>
+				<label>
+					RFC generado:
+				</label>
+				<input type="text" name="rfc" id="rfc" size="35">
+				</br>
+				</form>
+			</div>
+		</div>
+		</div>
+
+	<footer>
+    </br>
+    	Sofía de Jesús Muñoz Morales - 188168
+	</footer>
+</body>
+</html>

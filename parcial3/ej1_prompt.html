@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/estiloTd.css">
+  <link rel="icon" type="image/x-icon" href="asset/bamgeuticonjej.png">
+</head>
+<body>
+
+<h2>Prompt</h2>
+
+<p>Clic en el boton</p>
+
+<button onclick="myFunction()">Boton</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let person = prompt("Nombre", "Juan Perez");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hola " + person + "! Como estas?";
+  }
+}
+</script>
+
+<footer>
+    </br>
+    Sofía de Jesús Muñoz Morales - 188168
+</footer>
+</body>
+</html>

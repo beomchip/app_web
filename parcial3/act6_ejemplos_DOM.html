@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estiloTd.css">
+    <link rel="icon" type="image/x-icon" href="asset/bamgeuticonjej.png">
+</head>
+<body>
+    <h2>Ejemplo Doble Click</h2>
+    <p>Da doble click en la imagen para aumentar su tamaño</p>
+    <a id="enlace" href="http://google.com">Enlace</a>
+    <button onclick="clic()">Clic</button>
+
+    <img id="imagen" ondblclick="aumentarTam()"="margin:0; border:0;" src="asset/dagolaik.png" style="height: 100px;"/>
+    <button onclick="margen()">Clic</button>
+    <script>
+        function clic(){
+            var enlace = document.getElementById("enlace");
+            alert(enlace.href); 
+        }
+
+        function margen(){
+            var imagen = document.getElementById("imagen");
+            alert(imagen.style.margin);
+        }
+
+        function aumentarTam(){
+            var imagen = document.getElementById("imagen");
+            imagen.style.height = "200px";
+        }
+    </script>
+<footer>
+    </br>
+    Sofía de Jesús Muñoz Morales - 188168
+</footer>
+</body>
+</html>

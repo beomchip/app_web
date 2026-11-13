@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/estiloTd.css">
+  <link rel="icon" type="image/x-icon" href="asset/bamgeuticonjej.png">
+</head>
+<body>
+
+<h2>Ejemplos de Funciones</h2>
+
+<p>Clic en el boton</p>
+
+<button onclick="myFunction()">Boton</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var mensaje = "Hola Mundo";
+  var numeroLetras = mensaje.length; // numeroLetras = 10
+
+  var mensaje1 = "Hola";
+  var mensaje2 = " Mundo";
+  mensaje = mensaje1 + mensaje2; // mensaje = "Hola Mundo"
+  alert( mensaje );
+
+  mensaje2 = mensaje1.concat(" Mundo");
+  alert(mensaje2);
+
+  var variable1 = "Hola";
+  var variable2 = 3;
+  mensaje = variable1 + variable2;
+  alert(mensaje);
+
+  var mensajee1 = "Hola";
+  var mensajee2 = "Mundo";
+  mensaje = mensaje1 + mensaje2;
+  alert(mensaje);
+
+  mensaje = mensaje1 + " " + mensaje2;
+  alert(mensaje);
+
+  mensaje2 = mensaje1.toUpperCase();
+  alert(mensaje2);
+
+  mensaje2 = mensaje1.toLowerCase();
+  alert(mensaje2);
+
+  var letra = mensaje1.charAt(0);
+  alert(letra);
+
+  letra = mensaje1.charAt(2);
+  alert(letra);
+
+  mensaje = "Hola Mundo";
+
+  var posicion = mensaje.indexOf('a');
+  posicion = mensaje.indexOf('b');
+  alert(posicion);
+
+  posicion = mensaje.lastIndexOf('a');
+  posicion = mensaje.lastIndexOf('b');
+  alert(posicion);
+
+  var porcion = mensaje.substring(2);
+  porcion = mensaje.substring(4);
+  porcion = mensaje.substring(3);
+  alert(porcion);
+
+  porcion = mensaje.substring(3, 0);
+  porcion = mensaje.substring(0, 3);
+  alert(porcion);
+
+  porcion = mensaje.substring(-2);
+  alert(porcion);
+
+  porcion = mensaje.substring(1, 8);
+  porcion = mensaje.substring(3, 4);
+  alert(porcion);
+
+  var mensajee = "Hola Mundo, soy una cadena de texto!";
+  var palabras = mensaje.split(" ");
+  alert(palabras);
+
+  var palabra = "Hola";
+  var letras = palabra.split("");
+  alert(letras);
+
+
+ 
+  document.getElementById("demo").innerHTML =
+    "Cant de caracteres " + numeroLetras ;
+ 
+  
+}
+</script>
+
+<footer>
+    </br>
+    Sofía de Jesús Muñoz Morales - 188168
+</footer>
+</body>
+</html>
