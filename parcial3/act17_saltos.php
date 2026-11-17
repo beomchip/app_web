@@ -10,7 +10,7 @@
         Saltos de Línea
     </h2>
     <?php
-        echo "<p style="" >Hola <b> mundo </b>
+        echo "<p>Hola <b> mundo </b>
         Bienvenido <br></p>";
         echo "Aprendamos PHP \n 2026";
     ?>
