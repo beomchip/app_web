@@ -28,21 +28,35 @@ if($conexion)
 echo "</select>";
 
 if(isset($_POST['enviar'])){	 
-	$query="UPDATE clientes SET";
-     	if(isset($_POST['nombre']) && $_POST['nombre']!="")
-			 $query=$query." nombre ='".$_POST['nombre']."' ";
-	if(isset($_POST['correo']) && $_POST['correo']!="")
-		 $query=$query." correo_e='".$_POST['correo']."' ";
-       	if(isset($_POST['rfc']))
-			$query=$query." WHERE rfc= '".$_POST['rfc']."' ;";
-	echo $query;
-	$conexion = mysqli_connect($server,$db_user,$db_pass) or  die("Problemas en la conexion");
-	if($conexion){
-		mysqli_select_db($conexion,$database) 
-		 or  die("Error en base de datos");
-		if(mysqli_query($conexion,$query)) 
-			echo "<br> dato modificado<br>";
-		mysqli_close($conexion);
+	$query = "UPDATE clientes SET ";
+	$campo = false;
+
+	if(isset($_POST['nombre']) && $_POST['nombre'] != ""){
+		$query .= "nombre = '" . $_POST['nombre'] . "'";
+		$campo = true;
+	}
+	if(isset($_POST['correo']) && $_POST['correo'] != ""){
+		if($campo){
+			$query .= ", ";
+		}
+		$query .= "correo_e = '" . $_POST['correo'] . "'";
+		$campo = true;
+	}
+
+	if($campo && isset($_POST['rfc'])){
+		$query .= " WHERE rfc = '" . $_POST['rfc'] . "';";
+		echo $query;
+
+		$conexion = mysqli_connect($server,$db_user,$db_pass) or die("Problemas en la conexion");
+		if($conexion){
+			mysqli_select_db($conexion,$database) or die("Error en base de datos");
+			if(mysqli_query($conexion,$query)){
+				echo "<br> dato modificado<br>";
+			} else {
+				echo "<br> Error al modificar: " . mysqli_error($conexion) . "<br>";
+			}
+			mysqli_close($conexion);
+		}
 	}
 }
 ?>
