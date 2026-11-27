@@ -9,8 +9,8 @@
  $database = "sof_e_facturas";
 
 // Aquí abajo el nombre de username de la base de datos para acceder a ella.
- $db_user = "root";
+ $db_user = "sof";
 
 // Y ahora la contraseña:
- $db_pass = "";
+ $db_pass = "ClaveSofia123!";
  ?> 
