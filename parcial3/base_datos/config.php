@@ -6,7 +6,7 @@
 
 // Aquí abajo escribe el nombre de la base de datos.
 // por ejemplo: username_nombredelabasededatos
- $database = "e_facturas";
+ $database = "sof_e_facturas";
 
 // Aquí abajo el nombre de username de la base de datos para acceder a ella.
  $db_user = "root";
