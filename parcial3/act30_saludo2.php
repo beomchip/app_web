@@ -8,11 +8,11 @@
 <body>
     <?php
         if ($_POST['genero'] == 0)
-        {echo "Hola JOvenciTA ";
+        {echo "Hola Jovencita ";
         }
         else
         {
-        echo "Hola JOvenciTO ";
+        echo "Hola Jovencito ";
         }
         echo " <b> {$_POST['apellido']}</b>, un gusto saludarte";
     ?>
